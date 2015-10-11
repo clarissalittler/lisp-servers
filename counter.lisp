@@ -1,7 +1,7 @@
-(ql:quickload '(cl-who hunchentoot parenscript))
+(ql:quickload '(cl-who hunchentoot))
 
 (defpackage :counter-server 
-  (:use :cl :cl-who :hunchentoot :parenscript))
+  (:use :cl :cl-who :hunchentoot))
 
 (in-package :counter-server)
 
