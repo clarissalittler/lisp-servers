@@ -25,9 +25,9 @@
 
 (setf (ningle:route *app* "/texts" :method :POST)
       #'(lambda (params)
-	  (push (cons 'id text-id) text-list)
+	  (push (acons 'value "" (acons 'id text-id nil)) text-list)
 	  (incf text-id)
-	  (format nil "{id : ~a}" (1- text-id)))) ; oh that's horrid style sorry
+	  (format nil "{\"id\" : ~a}" (1- text-id)))) ; oh that's horrid style sorry
 
 ;;; so routes in ningle appear to be really similar to routes in something like Express
 ;;; let's try making this work with a little bit of backbone code that already exists
